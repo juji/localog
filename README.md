@@ -185,7 +185,7 @@ success('My project  is awesome!')
 
 ### close
 
-I fyou found that somehow, your app won't turn off, because localog is still opening it's connection,
+If you found that somehow, your app won't turn off because localog is still opening it's connection,
 shut it down with `close`
 
 ```ts
