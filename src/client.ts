@@ -97,3 +97,16 @@ export function box(str: string){
 //   success( i + ' Example content ' + Math.random() )
 // }
 // console.log('itt done')
+
+export default {
+  close,
+  setSocketFile,
+  stringfy,
+  json,
+  info,
+  start,
+  warn,
+  success,
+  error,
+  box,
+}
