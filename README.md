@@ -130,7 +130,7 @@ stringify({
 [Checkout consola's doc](https://www.npmjs.com/package/consola#getting-started) to see how it will look like on the terminal.
 
 
-### setSocketFile
+### setAddress
 
 localog listens and sends data to `./.localog` by default. 
 You can change this into any other file, or port number.
@@ -174,7 +174,7 @@ In your app:
 ```ts
 import { setSeparator, success } from 'localog'
 
-// before you log into anything
+// before you log anything
 setSeparator('|')
 
 // do your awesome stuff
