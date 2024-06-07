@@ -35,8 +35,7 @@ export function close(){
   }
 }
 
-// making it async moves it a lot faster
-function send({ type, message }:Data){
+async function send({ type, message }:Data){
   
   if(!socket){
 
@@ -63,7 +62,7 @@ function send({ type, message }:Data){
 
 }
 
-export async function setSocketFile(file: string, ){
+export function setSocketFile(file: string, ){
   socketFile = file
 }
 
