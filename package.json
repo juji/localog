@@ -21,7 +21,9 @@
   "files": [
     "dist"
   ],
-  "bin": "./dist/index.js",
+  "bin": {
+    "localog": "dist/index.js"
+  },
   "keywords": [
     "cli",
     "logging",
