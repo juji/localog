@@ -183,8 +183,8 @@ success('My project  is awesome!')
 
 ### close
 
-If you found that somehow, your app won't turn off because localog is still opening it's connection,
-shut it down with `close`
+If you found that somehow, your app won't turn off because the client is still opening connection,
+shut it down with `close`.
 
 ```ts
 import { close } from 'localog'
