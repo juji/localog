@@ -100,7 +100,7 @@ const SEP = options.separator
   })
   
   // https://stackoverflow.com/questions/14031763/doing-a-cleanup-action-just-before-node-js-exits
-  process.on('exit', () => { s.close() })
+  process.on('exit', () => { s.close() });
   process.on('SIGINT', () => { s.close() });
   process.on('SIGUSR1', () => { s.close() });
   process.on('SIGUSR2', () => { s.close() });

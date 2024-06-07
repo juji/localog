@@ -98,6 +98,11 @@ export function box(str: string){
 // }
 // console.log('itt done')
 
+process.on('exit', () => { close() });
+process.on('SIGINT', () => { close() });
+process.on('SIGUSR1', () => { close() });
+process.on('SIGUSR2', () => { close() });
+
 export default {
   close,
   setSocketFile,
