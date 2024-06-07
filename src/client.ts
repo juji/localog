@@ -3,7 +3,13 @@ import { Duplex, DuplexOptions } from 'stream';
 
 let socketFile: string|number = './.localog'
 
-type Data = { type: string, message: any }
+type Data = { 
+  type: string, 
+  message: any,
+  name?: string,
+  stack?: string,
+  cwd?: string
+}
 
 let socket: Socket|null = null
 let buff: MyDup|null = null
@@ -35,7 +41,7 @@ export function close(){
   }
 }
 
-async function send({ type, message }:Data){
+async function send({ type, message, name, stack, cwd }:Data){
   
   if(!socket){
 
@@ -58,7 +64,9 @@ async function send({ type, message }:Data){
   }
 
 
-  buff && buff.write(JSON.stringify({ type, message }) + SEP)
+  buff && buff.write(JSON.stringify({ 
+    type, message, name, stack, cwd 
+  }) + SEP)
 
 
 }
@@ -89,8 +97,18 @@ export function warn(str: string){
 export function success(str: string){
   send({ type: 'success', message: str })
 }
-export function error(str: string){
-  send({ type: 'error', message: str })
+export function error(message: string | Error){
+  if(typeof message === 'string'){
+    send({ type: 'error', message })
+  }else{
+    send({ 
+      type: 'error', 
+      message: message.message,
+      name: message.name,
+      stack: message.stack,
+      cwd: process.cwd()
+    })
+  }
 }
 export function box(str: string){
   send({ type: 'box', message: str })

@@ -3,6 +3,8 @@ import { createServer } from 'net'
 import consola from 'consola'
 import commandLineArgs, { OptionDefinition } from 'command-line-args'
 import { showHelp } from './help';
+import pc from "picocolors"
+import { sep } from 'path';
 
 const optionDefinitions: OptionDefinition[] = [
   { name: 'socket', alias: 's', type: String, defaultValue: './.localog' },
@@ -16,6 +18,26 @@ if(options.help) showHelp()
 
 const socket = options.port ? options.port : options.socket
 const SEP = options.separator
+
+function processErrorStack({ stack, cwd }){
+
+  return stack.split('\n').slice(1).map((v:string) => {
+
+    let str = v
+      .replace('file://', '')
+      .replace(cwd + sep, '')
+      .replace(/(\ +)at\ /,`$1${pc.gray('at ')}`)
+
+    let m = str.match(/\(([^)]+)\)/)
+    
+    if(m && m[1]) {
+      str = str.replace(/\([^)]+\)/, `(${pc.cyan(m[1])})`)
+    }
+
+    return str
+
+  }).join('\n')
+}
 
 ;(async () => {
 
@@ -74,6 +96,11 @@ const SEP = options.separator
         }
         else if(json.type === 'error' && json.message){
           consola.error( json.message )
+          if(json.stack){
+            console.log(
+              processErrorStack(json)
+            )
+          }
         }
         else if(json.type === 'box' && json.message){
           consola.box( json.message )
