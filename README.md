@@ -34,7 +34,7 @@ for(let i = 0; i < 99999; i++)
 ```
 
 <div style="display: flex; align-items: center">
-<image src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3pheTI5a3UybDFibXQxdmdoZDk2ajBlNWhncWhib3didWYxemx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LoPZzwaePOYQtwVj8p/source.gif" width="500px" height="auto" />
+<image src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3pheTI5a3UybDFibXQxdmdoZDk2ajBlNWhncWhib3didWYxemx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LoPZzwaePOYQtwVj8p/source.gif" width="640px" height="auto" />
 </div>
 
 ## Methods
