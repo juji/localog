@@ -93,7 +93,7 @@ export function box(str: string){
 }
 
 // 9999999 is good enough, i think
-for(let i = 0; i < 9999999; i++){
-  success( i + ' Example content ' + Math.random() )
-}
-console.log('itt done')
+// for(let i = 0; i < 9999999; i++){
+//   success( i + ' Example content ' + Math.random() )
+// }
+// console.log('itt done')
