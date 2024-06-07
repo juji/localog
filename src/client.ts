@@ -7,7 +7,7 @@ type Data = { type: string, message: any }
 
 let socket: Socket|null = null
 let buff: MyDup|null = null
-const SEP = '\uffff';
+let SEP = '\uffff';
 
 class MyDup extends Duplex{
 
@@ -63,12 +63,16 @@ async function send({ type, message }:Data){
 
 }
 
-export function setSocketFile( file: string|number ){
-  socketFile = file
+export function setAddress( address: string|number ){
+  socketFile = address
 }
 
-export function stringfy(str: any){
-  send({ type: 'stringfy', message: JSON.stringify(str) })
+export function setSeparator( separator: string ){
+  SEP = separator
+}
+
+export function stringify(str: any){
+  send({ type: 'stringify', message: JSON.stringify(str) })
 }
 export function json(str: any){
   send({ type: 'json', message: JSON.stringify(str) })
@@ -105,8 +109,9 @@ process.on('SIGUSR2', () => { close() });
 
 export default {
   close,
-  setSocketFile,
-  stringfy,
+  setAddress,
+  setSeparator,
+  stringify,
   json,
   info,
   start,

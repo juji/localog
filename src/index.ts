@@ -81,7 +81,7 @@ const SEP = options.separator
         else if(json.type === 'json'){
           console.log(JSON.parse(json.message))
         }
-        else if(json.type === 'stringfy'){
+        else if(json.type === 'stringify'){
           console.log(JSON.stringify(JSON.parse(json.message), null, 2))
         }
         else{
