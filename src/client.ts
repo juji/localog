@@ -1,7 +1,7 @@
 import { Socket } from "net"
 import { Duplex, DuplexOptions } from 'stream';
 
-let socketFile = './.logger'
+let socketFile: string|number = './.localog'
 
 type Data = { type: string, message: any }
 
@@ -52,7 +52,8 @@ async function send({ type, message }:Data){
       buff && buff.pipe(socket)
     })
     
-    socket.connect(socketFile)
+    // @ts-expect-error i don't know why
+    socket.connect( socketFile )
 
   }
 
@@ -62,7 +63,7 @@ async function send({ type, message }:Data){
 
 }
 
-export function setSocketFile(file: string, ){
+export function setSocketFile( file: string|number ){
   socketFile = file
 }
 
