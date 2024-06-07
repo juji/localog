@@ -15,7 +15,7 @@ In your `package.json`:
 }
 ```
 
-Run it, on a terminal:
+Run the server, on a terminal:
 
 ```bash
 npm run localog
@@ -183,8 +183,11 @@ success('My project  is awesome!')
 
 ### close
 
-If you found that somehow, your app won't turn off because the client is still opening connection,
-shut it down with `close`.
+The client will open connection to the server. It will keep it open until `exit`, `SIGINT`, 
+`SIGUSR1`, or `SIGUSR2` signal is detected.
+
+If you, somehow, need the client localog to shut down connection to it's server,
+try shutting it down with `close`.
 
 ```ts
 import { close } from 'localog'
