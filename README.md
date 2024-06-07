@@ -3,6 +3,12 @@
 Localog is a developer's utililty to help logging when developing a cli app.
 It renders logs in another terminal window.
 
+## Install
+
+```bash
+npm i localog
+```
+
 ## How To
 
 In your `package.json`:
