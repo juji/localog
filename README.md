@@ -33,7 +33,7 @@ for(let i = 0; i < 99999; i++)
   success(`${i}: Hello, ${new Date().toISOString()}`)
 ```
 
-<image src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3pheTI5a3UybDFibXQxdmdoZDk2ajBlNWhncWhib3didWYxemx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LoPZzwaePOYQtwVj8p/source.gif" width="500px" style="max-width:100%; display: block; margin: 1rem auto;" height="auto" />
+<image src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3pheTI5a3UybDFibXQxdmdoZDk2ajBlNWhncWhib3didWYxemx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LoPZzwaePOYQtwVj8p/source.gif" width="100%" style="max-width:500px; display: block; margin: 1rem auto;" height="auto" />
 
 
 ## Methods
