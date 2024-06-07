@@ -33,9 +33,7 @@ for(let i = 0; i < 99999; i++)
   success(`${i}: Hello, ${new Date().toISOString()}`)
 ```
 
-<div style="display: flex; align-items: center">
-<image src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2xrY21uaW94anoyeHUwamM1YXMwZWdhZDh5Y3d2NWE1Y3V1bnVlMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OUkBoYCGznU46l5NOm/giphy.gif" width="840px" height="auto" style="max-width:100%" />
-</div>
+<image src="https://d33kc2wwsvguti.cloudfront.net/k1k7st%2Fpreview%2F58496528%2Fmain_large.gif?response-content-disposition=inline%3Bfilename%3D%22main_large.gif%22%3B&response-content-type=image%2Fgif&Expires=1717802328&Signature=M8tNQxy3C4u-HAqksQK2VD-GImSBSYJzFwJ6yUDL0h5iABKSM029faWzFj08TkHpLPGU6IYwstxGwVuHWMtRH1RSxaN7Wh7yYgUTLdo~QmQTKxGt20LJUtCCJvCrm0Meew7tZFZghbRojIhmfD9pzFdmfzVoCoaiKB9LeXXaCcVRE40YGEI3SmWHjm2Y01578wlrVrNwoQVMtF5pKzIwYgIFOaWVQAgCpJ40aXoDk1h71xkaOXGe13NEjBqaLlkfmIUSRimRpdvtEV7A5sjTLA3LLeuY6lSFUsME9ipOYvuB479-gjIWpDYEpmEIO2BUZYcJzlYt9oXOUJjL9UTW1Q__&Key-Pair-Id=APKAJT5WQLLEOADKLHBQ" width="1282px" height="auto" style="max-width:100%" />
 
 ## Methods
 
