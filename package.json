@@ -18,6 +18,9 @@
       "default": "./dist/client.mjs"
     }
   },
+  "files": [
+    "dist"
+  ],
   "bin": "./dist/index.js",
   "keywords": [
     "cli",
