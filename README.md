@@ -39,7 +39,7 @@ for(let i = 0; i < 99999; i++)
   success(`${i}: Hello, ${new Date().toISOString()}`)
 ```
 
-<image src="https://d1e9l53z07zr6d.cloudfront.net/t7jjvt%2Fpreview%2F58500847%2Fmain_large.gif?response-content-disposition=inline%3Bfilename%3D%22main_large.gif%22%3B&response-content-type=image%2Fgif&Expires=1717841093&Signature=HWyigKECWviJE~Xl6HZ7ll6nGLVMRXq268AsEaH8bDwwnQyeMUCKEobf4OjRdJTL27wW5xZJKA49tGHnaWbC5dYG32a9ABII-tyW39YGafMmaQ0B~l1Rp7HSGsj2QHw90W71GFYGHBHYuI-JK4HtDMEic9qtFbz48XWJP8PEUX1D1U4HD2-lVDR2eOmSJ4ecBWTFg4yN5WuwK48XPcxyvizmk63MelkXg2yp9yjJA2tNIHFPihr~EbJj4Sle6D0DOBlSVZ-kjI0axl4wV7h35SqPYGvaX08dEtNyqAnLCqjWuNlyXt~tbZuLGJ-XAV2AeithZvSGrY--xd2fYwzg7w__&Key-Pair-Id=APKAJT5WQLLEOADKLHBQ" width="808px" height="auto" style="max-width:100%" />
+<image src="https://pouch.jumpshare.com/preview/GgdK4APi25dPhH7UfKCD0CQXzgbQDTW5kzQ2ZmM4smFz1_FMjAZKU6paq-X7seMHilz3pwRXMuGl-46Fn3RX5QDMyBnOB0rQth0B17d-cJ0" width="808px" height="auto" style="max-width:100%" />
 
 ## Methods
 
