@@ -39,6 +39,7 @@ function processErrorStack({ stack, cwd }){
     return str
 
   }).join('\n')
+  
 }
 
 ;(async () => {

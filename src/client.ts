@@ -3,7 +3,7 @@ import { Duplex, DuplexOptions } from 'stream';
 
 let socketFile: string|number = './.localog'
 
-type Data = { 
+type LocalogData = { 
   type: string, 
   message: any,
   name?: string,
@@ -44,7 +44,7 @@ export function close(){
   }
 }
 
-async function send({ type, message, name, stack, cwd }:Data){
+async function send({ type, message, name, stack, cwd }:LocalogData){
   
   if(!socket){
 
