@@ -60,8 +60,6 @@ function processErrorStack({ stack, cwd }){
         str = FSEP + temp + str
         temp = ''
       }
-      
-      // if(!endsWithSEP) console.log('NOT endsWithSEP')
         
       const endsWithSEP = str.at(-1) === BSEP
       const data = str.split(BSEP)
