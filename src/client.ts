@@ -33,7 +33,9 @@ async function send({ type, message, name, stack, cwd }:LocalogData){
     buff = new PassThrough()
     
     // silent error
-    socket.on('error',() => {})
+    socket.on('error',() => {
+      close()
+    })
 
     socket.setKeepAlive(true)
     
