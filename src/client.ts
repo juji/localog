@@ -27,9 +27,7 @@ class MyDup extends Duplex{
     callback()
   }
 
-  _read(size: number): void {
-    // console.log('read', size)
-  }
+  _read(size: number): void {}
   
 }
 
