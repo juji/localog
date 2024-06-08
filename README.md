@@ -38,8 +38,8 @@ import { success } from 'localog'
 for(let i = 0; i < 99999; i++)
   success(`${i}: Hello, ${new Date().toISOString()}`)
 ```
-
-<image src="https://pouch.jumpshare.com/preview/GgdK4APi25dPhH7UfKCD0CQXzgbQDTW5kzQ2ZmM4smFz1_FMjAZKU6paq-X7seMHilz3pwRXMuGl-46Fn3RX5QDMyBnOB0rQth0B17d-cJ0" width="808px" height="auto" style="max-width:100%" />
+<p align="center"><image 
+src="https://media.githubusercontent.com/media/juji/localog/main/blob/localog.gif" width="808px" height="auto" style="max-width:100%" /></p>
 
 ## Methods
 
