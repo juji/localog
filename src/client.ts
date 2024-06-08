@@ -1,5 +1,5 @@
 import { Socket } from "net"
-import { Duplex, DuplexOptions } from 'stream';
+import { PassThrough } from 'stream';
 
 let socketFile: string|number = './.localog'
 
@@ -12,28 +12,9 @@ type LocalogData = {
 }
 
 let socket: Socket|null = null
-let buff: MyDup|null = null
+let buff: PassThrough|null = null
 let BSEP = '\uffff';
 let FSEP ='\ufffe'
-
-class MyDup extends Duplex{
-
-  constructor(options: DuplexOptions) {
-    super(options);
-  }
-
-  _write(
-    chunk: any, 
-    encoding: BufferEncoding, 
-    callback: (error?: Error | null | undefined) => void
-  ): void {
-    this.push(chunk)
-    callback()
-  }
-
-  _read(size: number): void {}
-  
-}
 
 export function close(){
   if(socket) {
@@ -49,7 +30,7 @@ async function send({ type, message, name, stack, cwd }:LocalogData){
   if(!socket){
 
     socket = new Socket()
-    buff = new MyDup({})
+    buff = new PassThrough()
     
     // silent error
     socket.on('error',() => {})
