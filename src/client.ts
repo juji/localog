@@ -13,7 +13,8 @@ type Data = {
 
 let socket: Socket|null = null
 let buff: MyDup|null = null
-let SEP = '\uffff';
+let BSEP = '\uffff';
+let FSEP ='\ufffe'
 
 class MyDup extends Duplex{
 
@@ -64,9 +65,13 @@ async function send({ type, message, name, stack, cwd }:Data){
   }
 
 
-  buff && buff.write(JSON.stringify({ 
-    type, message, name, stack, cwd 
-  }) + SEP)
+  buff && buff.write(
+    FSEP + 
+    JSON.stringify({ 
+      type, message, name, stack, cwd 
+    }) 
+    + BSEP
+  )
 
 
 }
@@ -75,8 +80,9 @@ export function setAddress( address: string|number ){
   socketFile = address
 }
 
-export function setSeparator( separator: string ){
-  SEP = separator
+export function setSeparators( frontSeparator: string, backSeparator: string ){
+  FSEP = frontSeparator
+  BSEP = backSeparator
 }
 
 export function stringify(str: any){
@@ -128,7 +134,7 @@ process.on('SIGUSR2', () => { close() });
 export default {
   close,
   setAddress,
-  setSeparator,
+  setSeparators,
   stringify,
   json,
   info,

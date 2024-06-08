@@ -64,9 +64,9 @@ import {
   // to send data to
   setAddress,
 
-  // utils to set separator
+  // utils to set separators
   // used in sending data
-  setSeparator,
+  setSeparators,
 
   // utils to close the connection
   // will be done automatically 
@@ -162,29 +162,29 @@ success('Hello')
 ```
 
 
-### setSeparator
+### setSeparators
 
-localog uses `\uffff` to separate data from one another. 
+localog uses `\ufffe` and `\uffff` to separate data from one another. 
 You can set it to any character you want. 
 NOTE: it should be just one character.
 
 ```json
 {
   "scripts": {
-    "localog": "localog --separator='|'"
+    "localog": "localog --frontSeparator='^' --backSeparator='$'"
   }
 }
 ```
 
 In your app:
 ```ts
-import { setSeparator, success } from 'localog'
+import { setSeparators, success } from 'localog'
 
 // before you log anything
-setSeparator('|')
+setSeparators('^', '$')
 
 // do your awesome stuff
-success('My project  is awesome!')
+success('My project is awesome!')
 ```
 
 ### close

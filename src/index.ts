@@ -10,14 +10,16 @@ const optionDefinitions: OptionDefinition[] = [
   { name: 'socket', alias: 's', type: String, defaultValue: './.localog' },
   { name: 'port', alias: 'p', type: Number },
   { name: 'help', alias: 'h', type: Boolean },
-  { name: 'separator', type: String, defaultValue: '\uffff' }
+  { name: 'backSeparator', type: String, defaultValue: '\uffff' },
+  { name: 'frontSeparator', type: String, defaultValue: '\ufffe' }
 ]
 
 const options = commandLineArgs(optionDefinitions)
 if(options.help) showHelp()
 
 const socket = options.port ? options.port : options.socket
-const SEP = options.separator
+let BSEP = options.backSeparator;
+let FSEP = options.frontSeparator;
 
 function processErrorStack({ stack, cwd }){
 
@@ -53,32 +55,34 @@ function processErrorStack({ stack, cwd }){
 
     stream.on('data', d => {
       let str = d.toString()
-      const endsWithSEP = str.at(-1) === SEP
-
-      if(str[0] !== '{'){
-        str = temp + str
+      
+      if(str[0] !== FSEP){
+        str = FSEP + temp + str
         temp = ''
       }
-
+      
       // if(!endsWithSEP) console.log('NOT endsWithSEP')
-
-      const data = str.split(SEP)
+        
+      const endsWithSEP = str.at(-1) === BSEP
+      const data = str.split(BSEP)
 
       for(let i =0; i<data.length; i++){
 
         if(!data[i]) continue;
+        const dataStr = data[i].slice(1)
+        if(!dataStr) continue;
 
         if(i === (data.length-1) && !endsWithSEP){
-          temp += data[i];
+          temp = dataStr;
           continue;
         }
 
         let json;
         try{
-          json = JSON.parse(data[i])
+          json = JSON.parse(dataStr)
         }catch(e){
           consola.error(e)
-          console.info(data[i])
+          console.info(dataStr)
           continue;
         }
 
