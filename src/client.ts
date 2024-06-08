@@ -22,7 +22,11 @@ class MyDup extends Duplex{
     super(options);
   }
 
-  _write(chunk: any, encoding: BufferEncoding, callback: (error?: Error | null | undefined) => void): void {
+  _write(
+    chunk: any, 
+    encoding: BufferEncoding, 
+    callback: (error?: Error | null | undefined) => void
+  ): void {
     this.push(chunk)
     callback()
   }
