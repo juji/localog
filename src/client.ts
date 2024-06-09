@@ -110,7 +110,7 @@ process.on('SIGINT', () => { close() });
 process.on('SIGUSR1', () => { close() });
 process.on('SIGUSR2', () => { close() });
 
-export default {
+const localog = {
   close,
   setAddress,
   setSeparators,
@@ -122,4 +122,6 @@ export default {
   success,
   error,
   box,
-}
+} 
+
+export default localog
