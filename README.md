@@ -200,6 +200,9 @@ import { close } from 'localog'
 
 // closing the localog connection
 close()
+
+// this will also closes the connection
+process.exit()
 ```
 
 
