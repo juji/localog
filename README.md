@@ -3,6 +3,9 @@
 Localog is a developer's utililty to help logging when developing a cli app.
 It renders logs in another terminal window.
 
+It needs the environment variable: `LOCALOG_ENABLED` to have value to be able to work.
+
+
 ## Install
 
 ```bash
@@ -32,7 +35,7 @@ Where ever in your app:
 ```ts
 import { success } from 'localog'
 
-// success('Hello')
+// will need LOCALOG_ENABLED to have value
 
 // test this
 for(let i = 0; i < 99999; i++)
