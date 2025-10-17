@@ -37,11 +37,11 @@
     "@types/node": "^20.14.2",
     "pkgroll": "^2.1.1",
     "tsx": "^4.13.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "@types/command-line-args": "^5.2.3",
+    "@types/command-line-usage": "^5.0.4"
   },
   "dependencies": {
-    "@types/command-line-args": "^5.2.3",
-    "@types/command-line-usage": "^5.0.4",
     "command-line-args": "^5.2.1",
     "command-line-usage": "^7.0.1",
     "consola": "^3.2.3",
