@@ -3,7 +3,7 @@
 Localog is a developer's utililty to help logging when developing a cli app.
 It renders logs in another terminal window.
 
-It needs the environment variable `LOCALOG_ENABLED` to have non-empty value to be able to work.
+It needs the environment variable `__LOCALOG_ENABLED` to have non-empty value to be able to work.
 
 
 ## Install
@@ -35,9 +35,9 @@ Where ever in your app:
 ```ts
 import { success } from 'localog'
 
-// will need LOCALOG_ENABLED to be non-empty value
-// e.g LOCALOG_ENABLED="1"
-// e.g LOCALOG_ENABLED="0"
+// will need __LOCALOG_ENABLED to have non-empty value
+// e.g __LOCALOG_ENABLED="1"
+// e.g __LOCALOG_ENABLED="0"
 // they will both enable logging
 
 // test this
