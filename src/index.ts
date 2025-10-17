@@ -21,7 +21,7 @@ const socket = options.port ? options.port : options.socket
 let BSEP = options.backSeparator;
 let FSEP = options.frontSeparator;
 
-function processErrorStack({ stack, cwd }){
+function processErrorStack({ stack, cwd }: { stack: string, cwd?: string }){
 
   return stack.split('\n').slice(1).map((v:string) => {
 

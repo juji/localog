@@ -26,6 +26,8 @@ export function close(){
 }
 
 async function send({ type, message, name, stack, cwd }:LocalogData){
+
+  if(!process.env.LOCALOG_ENABLED) return;
   
   if(!socket){
 
