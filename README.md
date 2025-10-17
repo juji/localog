@@ -35,7 +35,7 @@ Where ever in your app:
 ```ts
 import { success } from 'localog'
 
-// will need LOCALOG_ENABLED to non-empty value
+// will need LOCALOG_ENABLED to be non-empty value
 // e.g LOCALOG_ENABLED="1"
 // e.g LOCALOG_ENABLED="0"
 // they will both enable logging
